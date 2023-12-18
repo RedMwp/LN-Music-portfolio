@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    color: #E5E4D1;
+    border:none;
+    font-family: 'Archivo', sans-serif;
+
+}
+body{
+    margin: 0 auto;
+    background: #101820;
+    /*background: #171919;*/
+    color:  #E5E4D1;
+    font-size: 16px;
+}
+p{
+    font-weight: 500;
+}
+.container{
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+#content-container{
+    background: green;
+    position: relative;
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+    border:none;
+}
+#main-content{
+    background: gray;
+}
+.side-btns{
+    background: black;
+    position: absolute;
+    left: 0;
+    transform: rotate(90deg);
+    display: none;
+}
+.ln-player-widget{
+    background: yellow;
+    position: absolute;
+    right: -10px;
+    transform: rotate(90deg);
+    display: none;
+}
+.got-email p{
+    font-size: 1.44em;
+    letter-spacing: .5px;
+    max-width: 580px;
+    line-height: 1.5
+    
+}
