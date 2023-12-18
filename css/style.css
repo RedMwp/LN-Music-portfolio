@@ -20,14 +20,14 @@ p{
     font-weight: 500;
 }
 .container{
-    width: 95%;
+    width: 90%;
     max-width: 1440px;
     margin: 0 auto;
 }
 #content-container{
     background: green;
     position: relative;
-    width: 95%;
+    width: 90%;
     max-width: 1440px;
     margin: 0 auto;
     border:none;
