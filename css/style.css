@@ -8,6 +8,7 @@
     border:none;
     font-family: 'Archivo', sans-serif;
 
+
 }
 body{
     margin: 0 auto;
@@ -18,23 +19,117 @@ body{
 }
 p{
     font-weight: 500;
+    line-height: 1.5;
 }
 .container{
     width: 90%;
     max-width: 1440px;
     margin: 0 auto;
 }
-#content-container{
-    background: green;
+
+nav{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .7px;
+}
+nav ul li{
+    display: inline-block;
+    padding:.8em 1em;
+    border-radius:30%;
+    transition: all .4s ease-in-out;
+    font-family: 'Roboto Mono', monospace;
+}
+nav ul li:hover, nav ul li:focus{
+    background: #E5E4D1;
+    color: #101820;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+}
+.foot a {
+    font-family: 'Roboto Mono', monospace;
+}
+.big-btn{
+    background: none;
+   width: 100%;
+   font-size: 6em;
+   text-align: left;
+   align-items: center;
+   text-transform: uppercase;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-weight: 700;
+   border-bottom:1px solid rgba(100%, 100%, 100%, 0.5);
+   margin: 20px 0;
+   color:#F32A56;
+}
+.big-btn i{
+    display: inline-flex;
+    height: 80px;
+    width: 80px;
+    font-size: 0;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border:1px solid rgba(100%, 100%, 100%, 0.8);;
+    margin-left: auto;
+    background: url('icons/arrow-right.svg') no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.big-btn i img{
+    height: 60%;
+    width: 60%;
+}
+#menu-btn{
+    background: none;
+    width: 30px;
+    height: 15px;
+    flex-shrink: 0;
     position: relative;
+    font-size: 0;
+    display: none;
+}
+#menu-btn::after{
+    content: "";
+    padding: 2px;
+    background: white;
+    position: absolute;
+    bottom:0;
+    left: 0;
     width: 90%;
-    max-width: 1440px;
-    margin: 0 auto;
-    border:none;
 }
-#main-content{
-    background: gray;
+#menu-btn::before {
+    content: "";
+    padding: 2px;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 130%;
 }
+.round-btn{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: purple;
+    position: absolute;
+left: 0;
+bottom: 0;
+display: none;
+}
+ 
 .side-btns{
     background: black;
     position: absolute;
@@ -54,5 +149,193 @@ p{
     letter-spacing: .5px;
     max-width: 580px;
     line-height: 1.5
+    
+}
+.hero .container{
+    width: 100%;
+}
+.hero .intro{
+    text-align: center;
+    text-transform:uppercase;
+    letter-spacing: .7px;
+    width: 100%;
+    position: relative;
+}
+.intro h1{
+    font-size: 6em;
+    font-weight: 800;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    transform: scaleX(1.3);
+    color: #F32A56;
+    
+}
+.intro img{
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    transform: rotate(-2deg) translateY(-32px);
+    border-radius: 8px;
+}
+.intro p{
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-size: 1.1em;
+}
+main{
+    position: relative;
+    overflow: hidden;
+}
+.scroller{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 200%;
+    margin-top: 100px;
+    transform: rotate(5deg) translateX(-45%);
+    z-index: 200;
+    position: relative;
+}
+.scroll{
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    height: 70px;
+    background: yellow;
+    color: #121212;
+    width: 100%;
+    justify-content: space-around;
+    
+}
+.scroll h1{
+    font-size: 4em;
+    color: #171717;
+    text-transform: uppercase;
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+
+}
+.about img{
+    width: 50%;
+    max-width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 10px;
+}
+.about-text{
+    width: 50%;
+    max-width: 500px;
+}
+.about-text p{
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+.about-text a{
+    display: block;
+    border-bottom: 1px solid;
+    max-width: 100px;
+    padding: .5em;
+    
+}
+@media (max-width:800px){
+    .intro h1{
+        font-size: 5em;
+    }
+    body{
+        font-size: 13px;
+    }
+    nav {
+        height: 100vh;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: fixed;
+        width: 100vw;
+        left: 0;
+        top:0;
+        padding-top: .9em;
+        z-index: 200;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        font-size: 4em;
+        padding: 0em;
+        font-family: 'Archivo', sans-serif;
+        font-weight: 800;
+        color: #E8F855;
+    }
+    nav ul li:hover{
+        background: none;
+    }
+  nav ul{
+      position: absolute;
+      left: 0;
+      bottom:-150vh;
+      padding: .4em;
+      background: #F32A56;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 4%;
+      
+  }
+  .logo{
+      margin-left: 5%;
+      position: relative;
+      z-index: 200;
+  }
+  nav .ln-socials{
+      position: relative;
+      z-index: 200;
+  }
+  #menu-btn{
+        display: block;
+        margin-right: 5%;
+    }
+    .big-btn{
+        font-size: 4em;
+        padding-bottom: .4em;
+    }
+    .big-btn i{
+        height: 45px;
+        width: 45px;
+    }
+    .about{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
+        transform: translateY(-50px)
+    }
+    .about img{
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+        height: 600px;
+    }
+    .about-text{
+        width: 100%;
+        margin:20px 0;
+        padding: 10px;
+    }
+    .hero{
+        padding: 60px 0;
+    }
+    .hero p{
+        padding: 0 10px;
+    }
+    .hero h1{
+        transform: scale(1)
+    }
     
 }
